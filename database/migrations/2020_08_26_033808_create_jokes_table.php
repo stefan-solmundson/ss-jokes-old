@@ -15,6 +15,11 @@ class CreateJokesTable extends Migration
     {
         Schema::create('jokes', function (Blueprint $table) {
             $table->id();
+            $table->text('the_joke');
+            $table->string('author', 128)->default('Unknown');
+            $table->string('tags')->nullable();
+            $table->string('rating', 2)->default('G');  // Ratings: E, G, PG, M, MA, R
+            $table->bigInterger('user_id')->unsigned()->default('0');
             $table->timestamps();
         });
     }
