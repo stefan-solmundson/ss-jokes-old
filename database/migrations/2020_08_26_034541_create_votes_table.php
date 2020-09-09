@@ -14,7 +14,11 @@ class CreateVotesTable extends Migration
     public function up()
     {
         Schema::create('votes', function (Blueprint $table) {
+            // https://laravel.com/docs/7.x/migrations#columns
             $table->id();
+            $table->bigInteger('user_id')->default(0)->unsigned();
+            $table->tinyInteger('vote')->default(0);
+            $table->bigInteger('joke_id')->default(0)->unsigned();
             $table->timestamps();
         });
     }

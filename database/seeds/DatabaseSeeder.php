@@ -11,8 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        // The Eloquent database seed files must be MANUALLY added
         $this->call(UserSeeder::class);
         $this->call(JokeSeeder::class);
+        $this->call(TagSeeder::class);
+        $this->call(VoteSeeder::class);
+        $this->call(RatingSeeder::class);
+        $this->call(StopWordSeeder::class);
     }
 }

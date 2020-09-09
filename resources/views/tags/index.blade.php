@@ -2,18 +2,17 @@
 
 @section('content')
 <div class="container">
-	<h1>TAG! You're It!</h1
-		>
-	<!-- @if(count($tags)>0) -->
+	<h1>Tags</h1>
 	@if($haveTags)
-	<h2 class="text-success">Found {{ count($tags) }}</h2>
-	@foreach($tags as $tag)
-	<p>{{ $tag->id}} <span class="badge badge-primary">
-		#{{$tag->tag}}
-	</span></p>
-	@endforeach
+		<h2 class="text-success">Found {{ count($tags) }}</h2>
+
+		@foreach($tags as $tag)
+			<p>{{ $tag->id}} <span class="badge badge-primary">
+				#{{$tag->tag}}
+			</span></p>
+		@endforeach
 	@else
-	<h2 class="text-warning">NO tags</h2>
+		<h2 class="bg-warning">NO tags</h2>
 	@endif
 </div>
 @endsection

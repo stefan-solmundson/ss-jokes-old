@@ -14,6 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            // https://laravel.com/docs/7.x/migrations#columns
             $table->id();
             $table->string('name');
             $table->string('email')->unique();

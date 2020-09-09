@@ -12,7 +12,7 @@ class VoteSeeder extends Seeder
      */
     public function run()
     {
-         $votes = [
+        $votes = [
         	[ 'user_id'=> 1,'vote'=> 1, 'joke_id'=> 1],
         	[ 'user_id'=> 3,'vote'=>-1, 'joke_id'=> 1],
         	[ 'user_id'=> 1,'vote'=> 1, 'joke_id'=> 2],

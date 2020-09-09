@@ -14,7 +14,9 @@ class CreateTagsTable extends Migration
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
+            // https://laravel.com/docs/7.x/migrations#columns
             $table->id();
+            $table->string('tag', 64);
             $table->timestamps();
         });
     }
