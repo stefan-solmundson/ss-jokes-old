@@ -19,7 +19,7 @@ class CreateJokesTable extends Migration
             $table->string('author', 128)->default('Unknown');
             $table->string('tags')->nullable();
             $table->string('rating', 2)->default('G');  // Ratings: E, G, PG, M, MA, R
-            $table->bigInterger('user_id')->unsigned()->default('0');
+            $table->bigInteger('user_id')->unsigned()->default('0');
             $table->timestamps();
         });
     }

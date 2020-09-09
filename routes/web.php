@@ -46,7 +46,8 @@ Route::get('/tags/{id}/edit', 'TagController@edit');
 // Route::delete('/ratings/{id}', 'RatingController@destroy');
 // Route::patch('/ratings/{id}', 'RatingController@patch');
 // Route::get('/ratings/{id}', 'RatingController@update');
-Route::resource('/ratings', 'RatingController@index');
+Route::resource('/ratings', 'RatingController');
+Route::resource('/jokes', 'JokeController');
 
 Auth::routes();
 
